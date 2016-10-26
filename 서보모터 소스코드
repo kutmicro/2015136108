@@ -1,4 +1,4 @@
-~~~~
+```
 //still colleting
 
 #include <SoftwareSerial.h> //시리얼 통신 라이브러리 호출
@@ -37,4 +37,4 @@ void loop() {
     myString="";  //myString 변수값 초기화
   }
 }
-~~~~
+```
