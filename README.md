@@ -12,4 +12,4 @@ DC모터 - Code Test
 초음파 센서 - Code Test  
 조도 센서 - Code Test  
 
-앱 인벤
+앱 인벤터로 앱 개
