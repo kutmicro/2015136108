@@ -6,7 +6,7 @@ SoftwareSerial btSerial(11, 12);
 //Motor
 int p1 = 7;
 int p2 = 8;
-int en = 9;
+int en = 9; // speed control
 
 int pwm =190;
 
