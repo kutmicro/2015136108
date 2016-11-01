@@ -17,24 +17,31 @@
     }
  
     void loop() {
-      while(mySerial.available())  //mySerial 값이 있으면
-      {
-        char myChar = (char)mySerial.read();  //mySerial int형식의 값을 char형식으로 변환
-        myString+=myChar;   //수신되는 문자열을 myString에 모두 붙임 (1바이트씩 전송되는 것을 모두 붙임)
-        delay(5);           //수신 문자열 끊김 방지
-      }
-  
-      if(!myString.equals(""))  //myString 값이 있다면
-      {
-        Serial.println("input value: "+myString); //시리얼모니터에 myString값 출력
- 
-          if(myString=="on")  //myString 값이 'on' 이라면
+      if(mySerial.available()){
+        char data = mySerial.read();
           {
-            myservo.write(60);     //각도 60도로 움직임
-          } else {
-            myservo.write(0);   //각도 0도로 움직임
+              if(data == 'a') // left
+              {
+              }
+              if(data == 'b') // forward
+              {
+              }
+              if(data == 'c') // right
+              {
+              }
+              if(data == 'd') // left back
+              {              
+              }
+              if(data == 'e') // back
+              {
+              }
+              if(data == 'f') // right back
+              {
+              }
+              if(data == 'g') // stop
+              {
+              }
           }
-        myString="";  //myString 변수값 초기화
       }
     }
-
+             
