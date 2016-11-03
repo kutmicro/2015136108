@@ -1,7 +1,7 @@
 // 수정전
 #include <SoftwareSerial.h>
 
-SoftwareSerial btSerial(11, 12); 
+SoftwareSerial btSerial(2, 3); 
 
 //Motor
 int p1 = 7;
