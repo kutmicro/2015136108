@@ -1,6 +1,6 @@
 // before change
 #define POT_PIN A0 
-#define LED_PIN 13 
+#define LED_PIN 22 
 
 void setup()
 {
