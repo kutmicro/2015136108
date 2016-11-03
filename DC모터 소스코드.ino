@@ -42,17 +42,21 @@ void loop()
     //회전 방향 제어
     switch (c)
     {
-      case 'a':  //a인 경우, forword
+      case 'a':
+      case 'b':
+      case 'c': //a,b,c인 경우, forword
         digitalWrite(13, HIGH);
         digitalWrite(p1, HIGH);
         digitalWrite(p2, LOW);
         break;
-      case 'b': //b인경우, back
+      case 'd':
+      case 'e':
+      case 'f'://d,e,f인경우, back
         digitalWrite(13, LOW);
         digitalWrite(p1, LOW);
         digitalWrite(p2, HIGH);
         break;
-      case 's': // stop
+      case 'g': // stop
         digitalWrite(13, LOW);
         digitalWrite(p1, LOW);
         digitalWrite(p2, LOW);
