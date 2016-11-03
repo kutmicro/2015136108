@@ -38,6 +38,7 @@
               }
               if(data == 'e') // back
               {
+                  servo.write(0);
               }
               if(data == 'f') // right back
               {
