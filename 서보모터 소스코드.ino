@@ -11,7 +11,7 @@
  
     void setup() {
       myservo.attach(12);   //서보 시그널 핀설정
-      myservo.write(90);     //서보 초기각도 90도 설정
+      myservo.write(0);     //서보 초기각도 90도 설정
       mySerial.begin(9600); //블루투스 시리얼 개방
     }
  
@@ -21,16 +21,16 @@
           {
               if(data == 'a') // left
               {
-                  servo.write(30);
+                  servo.write(-60);
                   delay(100);
               }
               if(data == 'b') // forward
               {
-                  servo.write(90);
+                  servo.write(0);
               }
               if(data == 'c') // right
               {
-                  servo.write(150);
+                  servo.write(60);
                   delay(100);
               }
               if(data == 'd') // left back
