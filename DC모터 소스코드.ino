@@ -49,9 +49,7 @@ void loop()
         digitalWrite(p1, HIGH);
         digitalWrite(p2, LOW);
         break;
-      case 'd':
-      case 'e':
-      case 'f'://d,e,f인경우, back
+      case 'e'://d,e,f인경우, back
         digitalWrite(13, LOW);
         digitalWrite(p1, LOW);
         digitalWrite(p2, HIGH);
