@@ -10,12 +10,18 @@ void loop(){
     Serial.println(val);
     if(val <= 45)
     {
-      // 후진 후 정지
+      digitalWrite(13, LOW);
+      digitalWrite(p1, LOW);
+      digitalWrite(p2, HIGH);
       if(val == 45)
       {
-        
+        digitalWrite(13, LOW);
+        digitalWrite(p1, LOW);
+        digitalWrite(p2, LOW);
+        break;
       }
     }
     delay(100);     
 }
 //거리측정
+  
