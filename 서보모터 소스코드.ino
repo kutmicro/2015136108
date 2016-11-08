@@ -33,15 +33,9 @@
                   servo.write(60);
                   delay(100);
               }
-              if(data == 'd') // left back
-              {              
-              }
               if(data == 'e') // back
               {
                   servo.write(0);
-              }
-              if(data == 'f') // right back
-              {
               }
               if(data == 'g') // stop
               {
