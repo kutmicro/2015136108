@@ -4,22 +4,19 @@
 SoftwareSerial btSerial(2, 3); 
 
 //Motor
-int p1 = 7;
-int p2 = 8;
-int en = 9; // speed control
+AF_DCMotor Lmotor(1);
+AF_DCMotor Rmotor(2);
 
 int pwm =190;
 
 void setup()
 {
-  pinMode(13, OUTPUT);
   btSerial.begin(9600);
-
- //Motor
- pinMode(p1, OUTPUT);
- pinMode(p2, OUTPUT);
- pinMode(en, OUTPUT);
-
+ //Motor 
+  Lmotor.setSpeed(200);
+  Lmotor.run(RELEASE);
+  Rmotor.setSpeed(200);
+  Rmotor.run(RELEASE);
 }
 
 void loop()
