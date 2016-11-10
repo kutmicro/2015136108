@@ -1,13 +1,8 @@
-
-
-
-
-
-
 // Adafruit Motor shield library
 // copyright Adafruit Industries LLC, 2009
 // this code is public domain, enjoy!
 /*
+
 * Usage Notes: 
 * For PIC32, all features work properly with the following two exceptions: 
 * 
@@ -32,6 +27,7 @@
 *  
 */
 // <BPS> 09/15/2012 Modified for use with chipKIT boards
+
 
 #ifndef _AFMotor_h_
 #define _AFMotor_h_
