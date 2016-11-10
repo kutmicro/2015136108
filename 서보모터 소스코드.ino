@@ -8,10 +8,11 @@
     int blueTx=14;   //Tx (블투 보내는핀 설정)
     int blueRx=15;   //Rx (블투 받는핀 설정)
     SoftwareSerial mySerial(blueTx, blueRx);  //시리얼 통신을 위한 객체선언
+    int curAngle = 90
  
     void setup() {
       myservo.attach(9);   //서보 시그널 핀설정
-      myservo.write(90);     //서보 초기각도 90도 설정
+      myservo.write(curAngle);     //서보 초기각도 90도 설정
       mySerial.begin(9600); //블루투스 시리얼 개방
     }
  
@@ -21,16 +22,24 @@
           {
               if(data == 'a') // left
               {
-                  servo.write(-60);
-                  delay(100);
+                  for (pos = curAngle ; pos > = 0; pos -=3) {    
+                    curAngle = pos;
+                    servo.write(pos);     
+                    delay(15);    
+                  }
+
               }
               if(data == 'b') // forward
               {
-                  servo.write(0);
+                  servo.write(90);
               }
               if(data == 'c') // right
               {
-                  servo.write(60);
+                  for (pos = curAngle; pos <= 0; pos +=3) {
+                    curAngle = pos;
+                    servo.write(pos);     
+                    delay(15);    
+                  }
                   delay(100);
               }
               if(data == 'e') // back
