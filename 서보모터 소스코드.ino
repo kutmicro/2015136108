@@ -44,7 +44,7 @@
               }
               if(data == 'e') // back
               {
-                  servo.write(0);
+                  servo.write(90);
               }
               if(data == 'g') // stop
               {
