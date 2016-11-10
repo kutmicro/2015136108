@@ -10,14 +10,12 @@ void loop(){
     Serial.println(val);
     if(val <= 45)
     {
-      digitalWrite(13, LOW);
-      digitalWrite(p1, LOW);
-      digitalWrite(p2, HIGH);
+      Lmotor.run(BACKWARD);
+      Rmotor.run(BACKWARD);
       if(val == 45)
       {
-        digitalWrite(13, LOW);
-        digitalWrite(p1, LOW);
-        digitalWrite(p2, LOW);
+       Lmotor.run(RELEASE);
+       Rmotor.run(RELEASE);
         break;
       }
     }
