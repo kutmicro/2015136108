@@ -1,7 +1,7 @@
 // 수정전
 #include <SoftwareSerial.h>
 
-SoftwareSerial btSerial(2, 3); 
+SoftwareSerial btSerial(14, 15); 
 
 //Motor
 AF_DCMotor Lmotor(1);
