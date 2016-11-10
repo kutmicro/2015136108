@@ -86,10 +86,12 @@
   #define MOTOR34_1KHZ    7   // 1:256, actual frequency 1.2KHz
 
   // PWM rate for DC motors.
-  #define DC_MOTOR_PWM_RATE   MOTOR34_39KHZ    // Note: for PIC32, both of these must be set to the same value
+  #define DC_MOTOR_PWM_RATE   MOTOR34_39KHZ
+  // Note: for PIC32, both of these must be set to the same value
   // since there's only one timebase for all 4 PWM outputs
   #define STEPPER1_PWM_RATE   MOTOR12_39KHZ
   #define STEPPER2_PWM_RATE   MOTOR34_39KHZ
+
 #endif
 
 // Bit positions in the 74HCT595 shift register output
@@ -154,6 +156,7 @@ class AF_DCMotor
     AF_DCMotor(uint8_t motornum, uint8_t freq = DC_MOTOR_PWM_RATE);
     void run(uint8_t);
     void setSpeed(uint8_t);
+  
   private:
     uint8_t motornum, pwmfreq;
 };
