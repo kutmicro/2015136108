@@ -12,7 +12,7 @@ void loop(){
     {
       Lmotor.run(BACKWARD);
       Rmotor.run(BACKWARD);
-      if(val == 45)
+      if(val => 42 && val <= 48)
       {
        Lmotor.run(RELEASE);
        Rmotor.run(RELEASE);
