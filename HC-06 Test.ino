@@ -1,10 +1,19 @@
 #include <SoftwareSerial.h>
 
-#define PIN_RX 14  // to bluetooth RXD (3.3V)
 
-#define PIN_TX 15 // to bluetooth TXD
+
+
+#define PIN_RX 2  // to bluetooth RXD (3.3V)
+
+#define PIN_TX 3  // to bluetooth TXD
+
+
+
 
 SoftwareSerial gSoftSerial(PIN_TX, PIN_RX);
+
+
+
 
 const char* gMenu = "HC-06 Settings.\n1) name\n2) pin\n3) baud rate\n4) Version\n";
 
@@ -148,5 +157,89 @@ void loop() {
    }
 
  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+void sendCmd(char* cmd) {
+
+  Serial.println(); 
+
+  gSoftSerial.write(cmd);
+
+  for(uint8_t i = 0; i < 5; ++i) {
+
+    delay(200);
+
+    Serial.print('.');
+
+  }
+
+  if(!gSoftSerial.available()) {
+
+       Serial.print(gMsgResponseError);
+
+  } else {
+
+      while(gSoftSerial.available()) {
+
+        delay(10);
+
+        Serial.print((char)gSoftSerial.read());
+
+      }
+
+  }
+
+  Serial.println("\n");  
+
+}
+
+
+
+
+char* readStr(uint8_t offset) {
+
+    uint8_t index = offset;
+
+    while(!Serial.available());
+
+    while(Serial.available()) {
+
+        delay(10);
+
+        gInChar = Serial.read();
+
+        gCharBuffer[index] = gInChar;
+
+        Serial.print(gInChar);
+
+        index++;
+
+    }
+
+    Serial.print("\n");
+
+    return gCharBuffer;
+
+}
+
+
+
+
+void clearBuffer() {
+
+  memset(gCharBuffer, '\0', 256);
 
 }
