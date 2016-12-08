@@ -4,18 +4,26 @@
 SoftwareSerial btSerial(14, 15); 
 
 //Motor
-AF_DCMotor Lmotor(1);
-AF_DCMotor Rmotor(2);
+AF_DCMotor Lfmotor(1);
+AF_DCMotor Rfmotor(2);
+AF_DCMotor Lbmotor(3);
+AF_DCMotor Rbmotor(4)
 
 
 void setup()
 {
   btSerial.begin(9600);
  //Motor 
-  Lmotor.setSpeed(200);
-  Lmotor.run(RELEASE);
-  Rmotor.setSpeed(200);
-  Rmotor.run(RELEASE);
+  Lfmotor.setSpeed(200);
+  Lfmotor.run(RELEASE);
+  Lbmotor.setSpeed(200);
+  Lbmotor.run(RELEASE);
+  
+  Rfmotor.setSpeed(200);
+  Rfmotor.run(RELEASE);
+  Rbmotor.setSpeed(200);
+  Rbmotor.run(RELEASE);
+  
 }
 
 void loop()
@@ -34,16 +42,22 @@ void loop()
       case 'a':
       case 'b':
       case 'c': //a,b,c인 경우, forword
-        Lmotor.run(FORWARD);
-        Rmotor.run(FORWARD);
+        Lfmotor.run(FORWARD);
+        Rfmotor.run(FORWARD);
+        Lbmotor.run(FORWARD);
+        Rbmotor.run(FORWARD);
         break;
       case 'e'://d,e,f인경우, back
-        Lmotor.run(BACKWARD);
-        Rmotor.run(BACKWARD);
+        Lfmotor.run(BACKWARD);
+        Rfmotor.run(BACKWARD);
+        Lbmotor.run(BACKWARD);
+        Rbmotor.run(BACKWARD);
         break;
       case 'g': // stop
-        Lmotor.run(RELEASE);
-        Rmotor.run(RELEASE);
+        Lfmotor.run(RELEASE);
+        Rfmotor.run(RELEASE);
+        Lbmotor.run(RELEASE);
+        Rbmotor.run(RELEASE);
       case '\r':  break;
       case '\n':  break;
 //      default:  //이도저도 아니면
