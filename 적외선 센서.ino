@@ -7,7 +7,6 @@ void loop(){
     int val;
     int volt = analogRead(analogPin);
     val = (6762/(volt-9))-4;
-    Serial.println(val);
     if(val <= 45)
     {
       Lfmotor.run(BACKWARD);
