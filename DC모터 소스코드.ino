@@ -39,15 +39,16 @@ void loop()
     //회전 방향 제어
     switch (c)
     {
-      case 'a':
-      case 'b':
-      case 'c': //a,b,c인 경우, forword
+      case 'a': // left
+      case 'b': // forword
         Lfmotor.run(FORWARD);
         Rfmotor.run(FORWARD);
         Lbmotor.run(FORWARD);
         Rbmotor.run(FORWARD);
         break;
-      case 'e'://d,e,f인경우, back
+      case 'c': //right
+        
+      case 'e':// back
         Lfmotor.run(BACKWARD);
         Rfmotor.run(BACKWARD);
         Lbmotor.run(BACKWARD);
