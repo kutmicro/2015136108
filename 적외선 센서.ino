@@ -10,12 +10,16 @@ void loop(){
     Serial.println(val);
     if(val <= 45)
     {
-      Lmotor.run(BACKWARD);
-      Rmotor.run(BACKWARD);
+      Lfmotor.run(BACKWARD);
+      Rfmotor.run(BACKWARD);
+      Lbmotor.run(BACKWARD);
+      Rbmotor.run(BACKWARD);
       if(val => 42 && val <= 48)
       {
-       Lmotor.run(RELEASE);
-       Rmotor.run(RELEASE);
+       Lfmotor.run(RELEASE);
+       Rfmotor.run(RELEASE);
+       Lbmotor.run(BACKWARD);
+       Rbmotor.run(BACKWARD);
         break;
       }
     }
