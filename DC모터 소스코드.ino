@@ -1,7 +1,7 @@
 // 수정전
 #include <SoftwareSerial.h>
+#include <AFMotor.h>
 
-SoftwareSerial btSerial(14, 15); 
 
 //Motor
 AF_DCMotor Lfmotor(1);
@@ -12,7 +12,7 @@ AF_DCMotor Rbmotor(4)
 
 void setup()
 {
-  btSerial.begin(9600);
+  Serial3.begin(9600);
  //Motor 
   Lfmotor.setSpeed(200);
   Lfmotor.run(RELEASE);
