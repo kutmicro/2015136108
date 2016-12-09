@@ -4,7 +4,7 @@
 
 void setup()
 {
-  Serial3.begin(9600_;
+  Serial3.begin(9600);
   pinMode(LED_PIN, OUTPUT);
   
 }
