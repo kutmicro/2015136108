@@ -1,13 +1,5 @@
 #include <SoftwareSerial.h>
 
-
-
-
-SoftwareSerial BTSerial(2,3); //Rx, Tx
-
-
-
-
 int distance;
 
 int trig = 7;
@@ -23,7 +15,7 @@ void setup() {
 
   Serial.begin(9600);
 
-  BTSerial.begin(9600);
+  Serial3.begin(9600);
 
 
 
@@ -65,7 +57,7 @@ void loop() {
 
 
 
-  BTSerial.write(distance);
+  Serial3.write(distance);
 
   
 
