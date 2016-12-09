@@ -2,9 +2,9 @@
 
 int distance;
 
-int trig = 7;
+int trig = 46;
 
-int echo = 6;
+int echo = 44;
 
 
 
