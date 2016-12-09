@@ -1,4 +1,4 @@
-/*#include <SoftwareSerial.h>
+/*#include <SoftwareSerial.h> // change HC-06 SETTING 
 
 void setup()  
 {  
