@@ -32,7 +32,7 @@ void loop()
         
   if (Serial3.available()) 
   {
-    char c = btSerial.read();
+    char c = Serial3.read();
    
     }
 
