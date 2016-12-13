@@ -7,7 +7,7 @@
 AF_DCMotor Lfmotor(1);
 AF_DCMotor Rfmotor(2);
 AF_DCMotor Lbmotor(3);
-AF_DCMotor Rbmotor(4)
+AF_DCMotor Rbmotor(4);
 
 
 void setup()
