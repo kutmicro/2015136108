@@ -77,5 +77,21 @@ void loop() {
 
   
   delay(1000);
+  
+  if(distance <= 45)
+    {
+      Lfmotor.run(BACKWARD);
+      Rfmotor.run(BACKWARD);
+      Lbmotor.run(BACKWARD);
+      Rbmotor.run(BACKWARD);
+      /*if(distance => 42 && distance <= 48)
+      {
+       Lfmotor.run(RELEASE);
+       Rfmotor.run(RELEASE);
+       Lbmotor.run(RELEASE);
+       Rbmotor.run(RELEASE);
+        break;
+      }*/
+    }
 
 }
