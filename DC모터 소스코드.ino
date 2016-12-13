@@ -4,8 +4,8 @@
 
 
 //Motor
-AF_DCMotor Lfmotor(1);
-AF_DCMotor Rfmotor(2);
+AF_DCMotor Lfmotor(2);
+AF_DCMotor Rfmotor(1);
 AF_DCMotor Lbmotor(3);
 AF_DCMotor Rbmotor(4);
 
@@ -34,12 +34,16 @@ void loop()
   {
     char c = Serial3.read();
    
-    }
 
     //회전 방향 제어
     switch (c)
     {
       case 'a': // left
+        Lfmotor.run(RELEASE);
+        Rfmotor.run(FORWARD);
+        Lbmotor.run(RELEASE);
+        Rbmotor.run(FORWARD);
+        break
       case 'b': // forword
         Lfmotor.run(FORWARD);
         Rfmotor.run(FORWARD);
@@ -47,6 +51,11 @@ void loop()
         Rbmotor.run(FORWARD);
         break;
       case 'c': //right
+        Lfmotor.run(FORWARD);
+        Rfmotor.run(RELEASE);
+        Lbmotor.run(FORWARD);
+        Rbmotor.run(RELEASE);
+        break;
         
       case 'e':// back
         Lfmotor.run(BACKWARD);
