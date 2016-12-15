@@ -15,6 +15,7 @@ void loop()
  
   if(Serial3.available())
   {
+    char data = Serial3.read();
     if(data == a) // if turn on the switch
     {
       digitalWrite(LED_PIN, HIGH);
