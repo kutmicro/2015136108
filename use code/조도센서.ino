@@ -16,11 +16,11 @@ void loop()
   if(Serial3.available())
   {
     char data = Serial3.read();
-    if(data == a) // if turn on the switch
+    if(data == 'o') // if turn on the switch
     {
       digitalWrite(LED_PIN, HIGH);
     }
-    else if(data == g) // if turn off the switch
+    else if(data == 'f') // if turn off the switch
     {
       digitalWrite(LED_PIN,LOW); // turn off the LED
     }
@@ -50,19 +50,14 @@ void setup()
 void loop()
 {
   int val = 0;
-  val = analogRead(POT_PIN); 
   
   if(Serial3.available())
   {
     char data = Serial3.read();
+    
     if(data == o) // if turn on the switch
     {
-      //조도센서 값이 100미만이면 LED를 켠다
-     if(val < 100) {
       digitalWrite(LED_PIN, HIGH);
-      } else {
-      digitalWrite(LED_PIN, LOW);
-      }
     }
     else if(data == f) // if turn off the switch
     {
