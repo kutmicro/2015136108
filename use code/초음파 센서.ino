@@ -68,11 +68,6 @@ void loop() {
 
   distance = pulseIn(echo,HIGH) / 58;
 
-
-  Serial.print("Distance = ");
-  Serial.print(distance);
-  Serial.println(" cm");
-
   Serial3.write(distance);
 
   
