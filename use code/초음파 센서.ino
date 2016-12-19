@@ -2,8 +2,8 @@
 #include <SoftwareSerial.h>
 
 int distance;
-int trig = 46;
-int echo = 44;
+int trig = 44;
+int echo = 46;
 
 void setup() {
 
@@ -44,8 +44,8 @@ void loop() {
 #include <SoftwareSerial.h>
 
 int distance;
-int trig = 46;
-int echo = 44;
+int trig = 44;
+int echo = 46;
 
 void setup() {
 
@@ -71,22 +71,13 @@ void loop() {
   Serial3.write(distance);
 
   
-  delay(1000);
+  delay(500);
   
-  if(distance <= 45)
+  f(distance <= 10)
     {
       Lfmotor.run(BACKWARD);
       Rfmotor.run(BACKWARD);
       Lbmotor.run(BACKWARD);
       Rbmotor.run(BACKWARD);
-      /*if(distance => 42 && distance <= 48)
-      {
-       Lfmotor.run(RELEASE);
-       Rfmotor.run(RELEASE);
-       Lbmotor.run(RELEASE);
-       Rbmotor.run(RELEASE);
-        break;
-      }*/
     }
-
 }
