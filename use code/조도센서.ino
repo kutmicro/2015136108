@@ -1,4 +1,4 @@
-/* not module
+/* not bluetooth
 
 #define POT_PIN A0 
 #define LED1_PIN 22
@@ -8,7 +8,6 @@
 
 void setup()
 {
-  Serial3.begin(9600);
   pinMode(LED1_PIN, OUTPUT);
   pinMode(LED2_PIN, OUTPUT);
   pinMode(LED3_PIN, OUTPUT);
@@ -17,32 +16,20 @@ void setup()
 }
 void loop()
 {
-  int val = 0;
- 
-  if(Serial3.available())
-  {
-    char data = Serial3.read();
-    if(data == 'o') // if turn on the switch
-    {
+
       digitalWrite(LED1_PIN, HIGH);
       digitalWrite(LED2_PIN, HIGH);
       digitalWrite(LED3_PIN, HIGH);
       digitalWrite(LED4_PIN, HIGH);
-    }
-    else if(data == 'f') // if turn off the switch
-    {
-      digitalWrite(LED1_PIN,LOW); // turn off the LED
+
+      delay(500);
+        
+      digitalWrite(LED1_PIN,LOW); 
       digitalWrite(LED2_PIN,LOW);
       digitalWrite(LED3_PIN,LOW);
-      digitalWrite(LED4_PIN,LOW);
-    }
-  delay(500);
-
-
-
-*/
-
-
+      digitalWrite(LED4_PIN,LOW)
+      
+}*/
 
 
 
