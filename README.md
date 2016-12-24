@@ -4,8 +4,4 @@
 
 Project name : HR Car( 이름의 H와 RC카의 R)
 
-작동영상 업로드 예정
-
-앱 인벤터 블럭 코딩 이미지 업로드 예정 
-
-앱 업로드 예정 
+작동영상 : https://youtu.be/lVWL_Rd42Ts
